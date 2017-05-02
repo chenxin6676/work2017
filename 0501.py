@@ -20,7 +20,7 @@ print(f1())
 print(f2())
 print('!!!!!!!!!!!!')
 
- 
+
 def count():
     fs = []
     for i in range(1, 4):
