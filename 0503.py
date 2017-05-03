@@ -25,3 +25,39 @@ squares = []
 for x in range(5):
     squares.append(lambda: x**2)
 print([x() for x in squares])
+
+print('#################')
+# 以下为测试网友的例子
+print('!!!!!!!!!1')
+
+
+def f(n):
+    return n * n
+print(f(3))
+
+
+
+print('!!!!!!!!!2')
+print(list(map(lambda n: n * n, [3])))
+
+
+
+
+print('!!!!!!!!!3')
+
+
+def f(n):
+    return lambda: n * n
+print(f(3)())
+
+
+
+
+print('!!!!!!!!!4')
+
+
+def f(n):
+    def g():
+        return n * n
+    return g
+print(f(3)())
