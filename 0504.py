@@ -1,5 +1,5 @@
 
-#
+
 # def func(x, y):
 #     return x + y
 # lit = [1, 2]
@@ -61,6 +61,7 @@
 # now()
 # print(now.__name__)
 
+
 # # 不带参数的装饰器log
 # import functools
 #
@@ -78,26 +79,65 @@
 #     return 2 + x + y
 # print(foo1(10, 20))
 # print(foo1.__name__)
+#
+#
+# # 带text参数的装饰器log
+# import functools
+#
+#
+# def log(text):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             print('Log is:', text, args, kwargs, func.__name__)
+#             return func(*args, **kwargs)
+#         return wrapper
+#     return decorator
+#
+#
+# @log('excute test')
+# def foo2(x):
+#     return 'TEST' + x
+#
+# print(foo2('chenxin'))
+# print(foo2.__name__)
+#
+#
 
 
-# 带text参数的装饰器log
 import functools
 
 
-def log(text):
-    def decorator(func):
-        @functools.wraps(func)
+def call(text):
+    if isinstance(text, str):
+        def decorator(func):
+            @functools.wraps(func)
+            def wrapper(*args, **kwargs):
+                print('begin call')
+                print(func(*args, **kwargs), text)
+                print('end call')
+                # return func(*args, **kwargs)
+            return wrapper
+        return decorator
+    else:
+        @functools.wraps(text)
         def wrapper(*args, **kwargs):
-            print('Log is:', text, args, kwargs, func.__name__)
-            return func(*args, **kwargs)
+            print('begin call')
+            print(text(*args, **kwargs))
+            print('end call')
         return wrapper
-    return decorator
 
 
-@log('excute test')
+@call('thisistext')
 def foo1(x):
-    return 'TEST' + x
+    # print('OK')
+    return x
+foo1(123)
 
-print(foo1('chenxin'))
-print(foo1.__name__)
+
+@call
+def foo2():
+    return 2
+foo2()
+
 
