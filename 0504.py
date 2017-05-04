@@ -1,4 +1,4 @@
-
+print('以下是装饰器内容')
 
 # def func(x, y):
 #     return x + y
@@ -141,3 +141,22 @@ def foo2():
 foo2()
 
 
+print('以下为偏函数')
+# 以下为偏函数内容
+
+import functools
+
+
+int2 = functools.partial(int, base=2)
+print(int2('100'))
+print(int2('101', base=10))
+max2 = functools.partial(max, 10)
+print(max2(4, 6, 9, 11))
+
+
+def mod(m, n):
+    return m % n
+print(mod(10, 3))
+mod2 = functools.partial(mod, n=4)
+print(mod2(8))
+print(mod2(10))
