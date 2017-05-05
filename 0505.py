@@ -30,13 +30,12 @@
 #
 # print(recu(5))
 
-# n*2*(n-1)*2*(n-2)*2...
-
+# # 求阶乘
 # def recu(m):
 #     if m == 1:
-#         return 2
+#         return 1
 #     else:
-#         return recu(m-1)*2*m
+#         return recu(m-1)*m
 # print(recu(5))
 
 
@@ -55,6 +54,10 @@
 def hannuota(n, a, b, c):
     if n == 1:
         print(a, '-->', c)
+#     elif n == 2:
+#         print(a, '-->', b)
+#         print(a, '-->', c)
+#         print(b, '-->', c)
     else:
         hannuota(n-1, a, c, b)
         hannuota(1, a, b, c)
