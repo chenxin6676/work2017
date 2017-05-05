@@ -1,6 +1,6 @@
 # 以下为回顾模块以前的讲解内容
 
-
+# # 列表作为参数的调用,可以直接用*加上列表名字
 # def sum2(*nums):
 #     s = 0
 #     for i in nums:
@@ -8,28 +8,9 @@
 #     return s
 # l = [1, 2, 3, 4]
 # print(sum2(*l))
-#
-#
-# a = 'this is a test'
-# for i in a.split(' '):
-#     print(i)
-#
 
 
-# #递归 n * (n-1) * (n-2) * ... * 1 = recu(n-1)*n
-# s = 1
-#
-#
-# def recu(m):
-#     if m > 1:
-#         s = recu(m-1) * m
-#         return s
-#     else:
-#         s = s * m
-#         return s
-#
-# print(recu(5))
-
+# #递归
 # # 求阶乘
 # def recu(m):
 #     if m == 1:
@@ -64,14 +45,38 @@
 #         hannuota(n-1, b, a, c)
 # hannuota(3, 'A', 'B', 'C')
 
-# 已知：数列1,1,2,4,7,13,24,44,...求数列的第 n项.(前面3个数字相加)
-def func(n):
-    if n == 1:
-        return 1
-    elif n == 2:
-        return 1
-    elif n == 3:
-        return 2
-    else:
-        return func(n-1) + func(n-2) + func(n-3)
-print(func(3))
+# # 已知：数列1,1,2,4,7,13,24,44,...求数列的第 n项.(前面3个数字相加)
+# def func(n):
+#     if n == 1:
+#         return 1
+#     elif n == 2:
+#         return 1
+#     elif n == 3:
+#         return 2
+#     else:
+#         return func(n-1) + func(n-2) + func(n-3)
+# print(func(3))
+
+# # 列出奇数
+# def func(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return func(n-1)+2
+# print(func(5))
+
+# # 迭代;以及另一种数据类型-枚举
+# L = ['a', 'b', 'c']
+# for index, value in enumerate(L, 2):
+#     print(index, value)
+# print(L)
+# print(type(enumerate(L)))
+# print([x for x in enumerate(L)])
+
+
+# # 列表生成式
+# L1 = ['A', 'B', 'C']
+# L2 = ['X', 'Y', 'Z']
+# print([x+y for x in L1 for y in L2])
+
+
