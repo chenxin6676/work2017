@@ -50,16 +50,28 @@
 #
 # print(fib(5))
 
-# 汉诺塔
-def hannuota(n, a, b, c):
-    if n == 1:
-        print(a, '-->', c)
-#     elif n == 2:
-#         print(a, '-->', b)
+# # 汉诺塔
+# def hannuota(n, a, b, c):
+#     if n == 1:
 #         print(a, '-->', c)
-#         print(b, '-->', c)
+# #     elif n == 2:
+# #         print(a, '-->', b)
+# #         print(a, '-->', c)
+# #         print(b, '-->', c)
+#     else:
+#         hannuota(n-1, a, c, b)
+#         hannuota(1, a, b, c)
+#         hannuota(n-1, b, a, c)
+# hannuota(3, 'A', 'B', 'C')
+
+# 已知：数列1,1,2,4,7,13,24,44,...求数列的第 n项.(前面3个数字相加)
+def func(n):
+    if n == 1:
+        return 1
+    elif n == 2:
+        return 1
+    elif n == 3:
+        return 2
     else:
-        hannuota(n-1, a, c, b)
-        hannuota(1, a, b, c)
-        hannuota(n-1, b, a, c)
-hannuota(3, 'A', 'B', 'C')
+        return func(n-1) + func(n-2) + func(n-3)
+print(func(3))
