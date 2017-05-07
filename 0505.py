@@ -79,4 +79,16 @@
 # L2 = ['X', 'Y', 'Z']
 # print([x+y for x in L1 for y in L2])
 
+# 递归列表最大值
+def maxlist(L, n):
+    if n == 0:
+        return L[0]
+    else:
+        if L[n] > maxlist(L[n-1], n-1):
+            return L[n]
+        else:
+            return maxlist(L[n-1], n-1)
+print(maxlist([1, 2], 1))
+
+
 
