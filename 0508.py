@@ -123,3 +123,38 @@ __author__ = 'Chenxin'
 #             return zuidazhi(L)
 # print(zuidazhi([5, 100, 40, -2, 30]))
 
+# # 装饰器
+# def loger(func):
+#     def inner(*args, **kwargs):
+#         print('Log file is:', args, kwargs)
+#         return func(*args, **kwargs)
+#     return inner
+#
+#
+# @loger
+# def foo1(x, y):
+#     return x + y
+#
+# print(foo1(1, 2))
+#
+#
+# @loger
+# def foo2():
+#     return 100
+#
+# print(foo2())
+
+# # 偏函数
+# import functools
+#
+# int2dec = functools.partial(int, base=2)
+# print(int2dec('100'))
+#
+#
+# def mod(m, n):
+#     return m % n
+# print(mod(10, 3))
+# mod_by_100 = functools.partial(mod, n=3)
+# print(mod_by_100(20))
+
+
