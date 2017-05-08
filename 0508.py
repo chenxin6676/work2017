@@ -101,15 +101,13 @@ __author__ = 'Chenxin'
 # def shaizi(n):
 #     if n % 3 == 0:
 #         return  n
-#
-#
 # relt = filter(shaizi, [1, 2, 3, 5, 7, 9, 12])
 # print(list(relt))
 
-
-
-
-
-
+# # sorted高阶函数
+# print(sorted([2, -3, 5, -9]))
+# print(sorted([2, -3, 5, -9], key=abs))
+# print(sorted(['Zoo', 'abc', 'Foo', 'hoo']))
+# print(sorted(['Zoo', 'abc', 'Foo', 'hoo'], key=str.lower))
 
 
