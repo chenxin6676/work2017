@@ -36,14 +36,45 @@ __author__ = 'Chenxin'
 # print(reduce(fn, [1, 3, 5, 7, 9]))
 
 # 将给出的数字字符串列表显示为串在一起的一个整数(按照列表默认顺序).
-from functools import reduce
+# from functools import reduce
+#
+#
+# def char2num(s):
+#     return {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}[s]
+#
+#
+# def str2int(s):
+#     return reduce(lambda x, y: x*10+y, map(char2num, s))
+#
+# print(str2int(['1', '3', '9']))
 
 
-def char2num(s):
-    return {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9}[s]
+# 将字符串列表转换为整数显示
+# from functools import reduce
+#
+#
+# def ftl(x):
+#     return x**2
+# print(list(map(ftl, [1, 2, 3])))
+#
+#
+# def add2(x, y):
+#     return x+y
+# print(reduce(add2, [1, 2, 3]))
+#
+#
+# def char2num(s):
+#     return {'1': 1, '2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '0': 0}[s]
+#
+#
+# def lst2int(x, y):
+#     return x*10+y
+# print(reduce(lst2int, list(map(char2num, ['2', '1', '3', '0', '5']))))
 
 
-def str2int(s):
-    return reduce(lambda x, y: x*10+y, map(char2num, s))
 
-print(str2int(['1', '3', '9']))
+
+
+
+
+
