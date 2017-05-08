@@ -110,18 +110,22 @@ __author__ = 'Chenxin'
 # print(sorted(['Zoo', 'abc', 'Foo', 'hoo']))
 # print(sorted(['Zoo', 'abc', 'Foo', 'hoo'], key=str.lower))
 
-# # 递归求最大值(还是没搞定)
-# def zuidazhi(L):
-#     n = len(L)-1
-#     if n == 0:
-#         return L[0]
-#     else:
-#         if L[n] > L[n-1]:
-#             return L[n]
-#         else:
-#             L.pop()
-#             return zuidazhi(L)
-# print(zuidazhi([5, 100, 40, -2, 30]))
+# 递归求最大值(还是没搞定)(终于搞定了)
+def zuidazhi(L):
+    n = len(L)-1
+    if n == -1:
+        print('None')
+        exit()
+    if n == 0:
+        return L[0]
+    else:
+        if L[n] > L[n-1]:
+            L.pop(n-1)
+            return zuidazhi(L)
+        else:
+            L.pop()
+            return zuidazhi(L)
+print(zuidazhi([1, -2, 5, -100, 20]))
 
 # # 装饰器
 # def loger(func):
