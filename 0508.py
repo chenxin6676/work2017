@@ -161,4 +161,7 @@ __author__ = 'Chenxin'
 # mod_by_100 = functools.partial(mod, n=3)
 # print(mod_by_100(20))
 
+for index, value in enumerate(['a', 'b', 'c']):
+    print(index, value)
 
+print(type(range(5)))
