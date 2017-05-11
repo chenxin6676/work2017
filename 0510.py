@@ -36,3 +36,42 @@ __author__ = 'Chenxin'
 # zhangsan.set_sex('Nanren')
 # print(zhangsan.get_sex())
 
+
+class Animal(object):
+    def run(self):
+        print('Animal is running!')
+
+
+class Dog(Animal):
+    def run(self):
+        print('Dog is running!')
+
+
+class Cat(Animal):
+    pass
+
+
+def run_twice(animal):  # 这里为什么是小写的animal,而不是大些的呢?因为大些的会和类Animal冲突.
+    animal.run()
+    animal.run()
+
+run_twice(Animal())
+run_twice(Dog())
+run_twice(Cat())
+
+
+class Tort(Animal):
+    def run(self):
+        print('Tort is running slowly...')
+
+run_twice(Tort())
+
+
+class Car(object):
+    def run(self):
+        print('The Car is running')
+
+run_twice(Car())
+
+
+
