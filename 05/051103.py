@@ -18,8 +18,8 @@ A = Stu()
 B = Stu()
 # A.set_age=MethodType(set_age,A)
 # B.set_age=MethodType(set_age,B)
-# A.set_age = set_age
-# B.set_age = set_age
+# A.set_age = set_age # 这种是错误的写法,这个写法只能用在类上
+# B.set_age = set_age # 这种是错误的写法...
 A.set_age(10)
 B.set_age(15)
 print(A.age, B.age)
