@@ -6,6 +6,7 @@ __author__ = 'Chenxin'
 这里介绍的是实例绑定变量或绑定方法中,__slots__的用法
 '''
 
+
 class Student(object):
     __slots__ = ('name', 'age', 'register')
     pass
@@ -21,10 +22,11 @@ def register(self, name):
     self.name = name
     print(self.name)
 
+# Student.register = register
+s.register = register
+# from types import MethodType
 
-from types import MethodType
 
+# s.register = MethodType(register, s)
 
-s.register = MethodType(register, s)
-
-s.register(20)
+#s.register(20)
