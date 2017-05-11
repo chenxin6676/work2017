@@ -1,3 +1,29 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+__author__ = 'Chenxin'
+
+
+class Student(object):
+    # __slots__ = ('name', 'age')
+    pass
+
+def register(name):
+    print(name)
+
+
+
+s = Student()
+s.name = 'chenxin'
+s.age = 20
+print(s.name, s.age)
+s.score = 100
+print(s.score)
+
+
+
+
+
 # #!/usr/bin/env python3
 # # -*- coding: utf-8 -*-
 #
