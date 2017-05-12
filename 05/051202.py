@@ -31,11 +31,15 @@ class Student(object):
 
 s = Student('Zhangsan')
 # s.set_score(59)
+print('#######1')
 s.score = 60
+print('#######2')
 s.score2 = 80
 print(s.get_name(), s.score)
+print('#######3')
 print(dir(s))
 print(dir(Student))
+print('#######4')
 print(type(s.score))
 print(type(s.score2))
 print(type(Student.score))
