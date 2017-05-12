@@ -7,14 +7,13 @@ __author__ = 'Chenxin'
 class Student(object):
     @property
     def score(self):
-        print('one')
+        print('###one')
         return self.__score
 
     @score.setter
     def score(self, value):
-        print('two')
+        print('###two')
         self.__score = value
-
 
 
 lisi = Student()
@@ -22,4 +21,6 @@ print(dir(Student))
 print(dir(lisi))
 print('###########')
 lisi.score = 60
+print('######2')
+print(lisi.score)
 

@@ -22,11 +22,12 @@ class Screen(object):
 
     @property
     def resolution(self):
-        self.__resolution = 1024
+        self.__resolution = self.__width * self.__height
         return self.__resolution
 
 dell = Screen()
-dell.width = 10
-dell.height = 5
+dell.width = 1024
+dell.height = 768
 print(dell.width, dell.height, dell.resolution)
+assert dell.resolution == 786432, '1024 * 768 = %d ?' % dell.resolution
 
