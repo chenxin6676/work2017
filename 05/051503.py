@@ -36,5 +36,10 @@ for name, member in Weekday.__members__.items():
     print(name, member, member.value)
 
 
+for i in Weekday.__members__.items():
+    print(i)
+    print(type(i))
+
+
 
 
