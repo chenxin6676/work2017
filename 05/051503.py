@@ -14,11 +14,27 @@ class Student(object):
 s = Student('Michle')
 s()
 
+# 以下是枚举类的例子
 
 from enum import Enum
 
-Month = Enum('Month2', 'Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec')
-
+Month = Enum('Month', 'A, B, C, D')
 for name, member in Month.__members__.items():
-    print(name, '=>', member, ',', member.value)
+    print(name, member, member.value)
+
+
+from enum import Enum, unique
+
+
+@unique
+class Weekday(Enum):
+    M = 1
+    T = 2
+    S = 3
+
+for name, member in Weekday.__members__.items():
+    print(name, member, member.value)
+
+
+
 
