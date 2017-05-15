@@ -21,6 +21,7 @@ print(s.name)
 print(s.score)
 print(s.age())
 print(s.xingbie)
+print(s.xingbie.testxxx)
 
 
 class Chain(object):
