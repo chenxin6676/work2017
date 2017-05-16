@@ -44,3 +44,21 @@ else:
 finally:
     print('finally')
 print('EMD')
+
+print('########################')
+class TestError(ValueError):
+    pass
+def foo(s):
+    n = int(s)
+    if n==0:
+        raise TestError('invalid value: %s' % s)
+    return 10 / n
+
+def bar():
+    try:
+        foo('0')
+    except TestError as e:
+        print('TestError!')
+        # raise  # 这里如果raise抛出去的话,就抛到主的里面了,就会显示给用户了.否则就只打印字符,然后返回正常的0值,而不是1
+
+bar()
