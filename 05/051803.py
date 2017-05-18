@@ -17,10 +17,16 @@
 #     line = file.readlines()
 #     for oneline in line:
 #         print(oneline.strip())
-with open('/Users/chenxin/gitsvn/localwork/05/0518.txt', 'a') as writefile:
-    writefile.write('6 line\n')
+# with open('/Users/chenxin/gitsvn/localwork/05/0518.txt', 'a') as writefile:
+#    writefile.write('6 line\n')
 
-with open('/Users/chenxin/gitsvn/localwork/05/0518.txt', 'r') as readfile:
-    eveline = readfile.readlines()
-    for line in eveline:
-        print(line.strip())
+import time
+
+with open('/Users/chenxin/gitsvn/localwork/05/0518.txt', 'r+') as readfile:
+    # eveline = readfile.readlines()
+    # for line in eveline:
+    #     print(line.strip())
+    readfile.write('Hello world4\n')
+    # time.sleep(2)
+    for i in readfile.readlines():
+        print(i.strip())
