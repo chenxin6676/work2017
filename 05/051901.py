@@ -9,7 +9,7 @@ for x in os.walk(os.path.realpath('.')):
         if os.path.splitext(onefile)[1] == '.py':
             print(onefile, os.path.realpath(onefile))
 
-
+print(os.path.abspath('.'))
 
 
 
