@@ -1,32 +1,34 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# 属性函数装饰器的使用@property
 
 
-def fn(n):
-    if n == 1:
-        return n
-    elif n > 1:
-        return n * fn(n - 1)
+class Stu(object):
+    # def __init__(self, name, score):
+    #     self.name = name
+    #     self.score = score
+
+    @property
+    def score(self):
+        return self._score
+
+    @score.setter
+    def score(self, value):
+        if not isinstance(value, int):
+            raise ValueError('score is not int!')
+        if value < 0 or value > 100:
+            raise ValueError('score shuld between 0-100')
+        self._score = value
+
+    @score.deleter
+    def score(self):
+        print('This is a test!')
 
 
-print(fn(5))
-
-
-class Student(object):
-    def __init__(self, name, score):
-        self._name = name
-        self.__score = score
-
-    def prin(self):
-        print(self._name)
-
-    def pris(self):
-        print(self.__score)
-
-
-s = Student('zhangsan', 90)
-s.prin()
-print(s._name)
-print(s.__score)
-# s.pris()
+# s = Stu('Zhangsan', 99)
+# print(s.name, s.score)
+s = Stu()
+s.name = 'Zhangsan'
+s.score = 100
+print(s.name, s.score)
 
